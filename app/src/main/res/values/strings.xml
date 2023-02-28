@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">India Social</string>
+    <string name="welcome">Welcome To Our World</string>
+    <string name="creator">By-Tarun</string>
+    <string name="t">Terms and</string>
+    <string name="c">Conditions</string>
+    <string name="signIn">Sign In</string>
+    <string name="have_ac">Already have an account</string>
+    <string name="with_g">Or sign in with</string>
+    <string name="signup">Sign Up</string>
+    <string name="new_ac">Create a new account</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="signUpWith">Sign Up with</string>
+    <string name="forgetPassword">Forget Password</string>
+    <string name="fullName">Full Name</string>
+    <string name="email">Email Id</string>
+    <string name="password">Password</string>
+    <string name="user_name">Username</string>
+    <string name="tarun">Tarun</string>
+    <string name="full_name">Full Name</string>
+    <string name="con_password">Con-Password</string>
+</resources>

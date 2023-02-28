@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "266770435535",
+    "project_id": "india-social-91053",
+    "storage_bucket": "india-social-91053.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266770435535:android:aa24921e29219f5b3a16ba",
+        "android_client_info": {
+          "package_name": "com.example.indiasocial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266770435535-roek7cinedbr707rlhkt4eqcvh0mc7tb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdngfOxF_crNoENDoKOpjJ_9YpHO8L-Sw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266770435535-roek7cinedbr707rlhkt4eqcvh0mc7tb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
