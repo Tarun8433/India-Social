@@ -120,9 +120,11 @@
             android:layout_width="401dp"
             android:layout_height="66dp"
             android:layout_marginTop="14dp"
+            android:layout_marginBottom="200dp"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:src="@drawable/fil_round"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -146,7 +148,6 @@
             android:id="@+id/btnHaveAc"
             android:layout_width="169dp"
             android:layout_height="27dp"
-            android:layout_marginEnd="32dp"
             android:background="#0000"
             android:fontFamily="@font/font_sec"
             android:padding="0dp"
@@ -154,22 +155,24 @@
             android:textAllCaps="false"
             android:textColor="@color/colorPrimary"
             android:textSize="11sp"
-            app:layout_constraintEnd_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="234dp"
             android:layout_height="106dp"
+            android:layout_marginBottom="56dp"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:src="@drawable/btn_round"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.538"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnHaveAc"
-            app:layout_constraintVertical_bias="0.342" />
+
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/btn_sign_up"
@@ -195,12 +198,9 @@
             android:text="@string/creator"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView5"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintEnd_toEndOf="@+id/btnHaveAc"
+            app:layout_constraintStart_toStartOf="@+id/btnHaveAc"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
         <ProgressBar
             android:id="@+id/progressBar"

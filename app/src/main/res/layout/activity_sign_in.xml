@@ -94,7 +94,6 @@
         android:id="@+id/btnHaveAc"
         android:layout_width="119dp"
         android:layout_height="27dp"
-        android:layout_marginEnd="32dp"
         android:background="#0000"
         android:fontFamily="@font/font_sec"
         android:padding="0dp"
@@ -102,14 +101,14 @@
         android:textAllCaps="false"
         android:textColor="@color/colorPrimary"
         android:textSize="11sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="214dp"
         android:layout_height="108dp"
-        android:layout_marginTop="40dp"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:src="@drawable/btn_round"
@@ -135,7 +134,6 @@
         android:id="@+id/imageView6"
         android:layout_width="214dp"
         android:layout_height="108dp"
-        android:layout_marginTop="40dp"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:src="@drawable/btn_round"
@@ -158,14 +156,28 @@
         app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/GoogleSignInIng"
         android:layout_width="67dp"
         android:layout_height="68dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:src="@drawable/g_icon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintEnd_toEndOf="@+id/btnHaveAc"
+        app:layout_constraintStart_toStartOf="@+id/btnHaveAc"
+        app:layout_constraintTop_toBottomOf="@+id/btnHaveAc" />
+
+    <Button
+        android:id="@+id/googleSignInButton"
+        android:layout_width="46dp"
+        android:layout_height="43dp"
+        android:background="@drawable/round_btn"
+        android:fontFamily="@font/font_sec"
+        android:onClick="registrationUser"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/GoogleSignInIng"
+        app:layout_constraintEnd_toEndOf="@+id/GoogleSignInIng"
+        app:layout_constraintStart_toStartOf="@+id/GoogleSignInIng"
+        app:layout_constraintTop_toTopOf="@+id/GoogleSignInIng" />
 
     <TextView
         android:id="@+id/textView3"
@@ -178,7 +190,17 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintTop_toBottomOf="@+id/googleSignInButton" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

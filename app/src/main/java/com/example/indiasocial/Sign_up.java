@@ -24,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Sign_up extends AppCompatActivity {
 
     ActivitySignUpBinding binding;
+    private ProgressBar progressBar;
 
     // firebase Variables
     private FirebaseAuth auth;
@@ -107,8 +108,7 @@ public class Sign_up extends AppCompatActivity {
 
                         if (task.isSuccessful()){
                             FirebaseUser firebaseUser = auth.getCurrentUser();
-                            Toast.makeText(Sign_up.this, "Registration is successful", Toast.LENGTH_LONG).show();
-                            binding.progressBar.setVisibility(View.GONE);
+
                             // Creating a object of the class Users
                             Users user = new Users(userName, email, password);
 
@@ -116,29 +116,31 @@ public class Sign_up extends AppCompatActivity {
                             DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Register Users");
 
                             reference.child(firebaseUser.getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
 
                                     if (task.isSuccessful()){
-                                        // Send Email verification code to the new user
-                                        firebaseUser.sendEmailVerification();
+
+                                        Toast.makeText(Sign_up.this, "Registration is successful", Toast.LENGTH_SHORT).show();
                                         binding.progressBar.setVisibility(View.GONE);
+
                                         // after the success full registration and saving the data into the database sending the user to the
-                                        // home activity
-                                        Intent intent = new Intent(Sign_up.this, Home.class);
+                                        // sign in activity
+                                        Intent intent = new Intent(Sign_up.this, Sign_in.class);
                                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK
                                                 | Intent.FLAG_ACTIVITY_NEW_TASK);
                                         startActivity(intent);
                                         finish();
                                     }else{
-                                        Toast.makeText(Sign_up.this, "Registration Field", Toast.LENGTH_SHORT).show();
                                         binding.progressBar.setVisibility(View.GONE);
+                                        Toast.makeText(Sign_up.this, "Registration Field", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
                         }else {
-                            Toast.makeText(Sign_up.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                             binding.progressBar.setVisibility(View.GONE);
+                            Toast.makeText(Sign_up.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }
                     }
                 });
