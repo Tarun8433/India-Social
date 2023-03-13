@@ -2,7 +2,7 @@ package com.example.indiasocial.Moduls;
 
 public class Users {
 
-    String profilePic, userName, email, password, UserId;
+    String profilePic, userName, email, password, UserId, bio ;
 
     public Users() {
 
@@ -22,6 +22,11 @@ public class Users {
         this.profilePic = profilePic;
     }
 
+    public Users(String userName, String profilePic, String bio, String email) {
+        this.userName = userName;
+        this.bio = bio;
+        this.profilePic = profilePic;
+    }
 
 
     public String getProfilePic() {
@@ -62,5 +67,13 @@ public class Users {
 
     public void setUserId(String userId) {
         UserId = userId;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
     }
 }

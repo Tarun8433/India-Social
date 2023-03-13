@@ -128,6 +128,7 @@ public class Sign_in extends AppCompatActivity {
         // on click googleSignInButton
         binding.googleSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
                 signIn();
             }
@@ -175,6 +176,7 @@ public class Sign_in extends AppCompatActivity {
     private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
 
         AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(),null);
+        binding.progressBar.setVisibility(View.VISIBLE);
         mAuth.signInWithCredential(credential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -192,6 +194,7 @@ public class Sign_in extends AppCompatActivity {
 
                     Toast.makeText(Sign_in.this, "Sign In with Google", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(),Home.class);
+                    binding.progressBar.setVisibility(View.GONE);
                     startActivity(intent);
                 }else {
                     Toast.makeText(Sign_in.this, "Authentication is failed", Toast.LENGTH_SHORT).show();
