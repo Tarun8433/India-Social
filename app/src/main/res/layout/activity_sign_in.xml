@@ -6,12 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryVariant"
+    tools:context=".Sign_in"
     >
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimaryVariant"
-    tools:context=".Sign_in">
+    android:layout_height="wrap_content"
+    >
 
     <TextView
         android:id="@+id/app_name"
@@ -51,7 +51,8 @@
         android:src="@drawable/fil_round"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        android:contentDescription="@string/todo" />
 
     <EditText
         android:id="@+id/email"
@@ -64,7 +65,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="@id/imageView2"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        android:autofillHints="" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -75,7 +77,8 @@
         android:src="@drawable/fil_round"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:contentDescription="@string/todo" />
 
     <EditText
         android:id="@+id/password"
@@ -88,19 +91,19 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:autofillHints="" />
 
     <Button
-        android:id="@+id/btnHaveAc"
-        android:layout_width="119dp"
-        android:layout_height="27dp"
+        android:id="@+id/forgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="#0000"
         android:fontFamily="@font/font_sec"
-        android:padding="0dp"
         android:text="@string/forgetPassword"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimary"
-        android:textSize="11sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintStart_toStartOf="@+id/imageView6"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
@@ -113,7 +116,8 @@
         android:paddingEnd="20dp"
         android:src="@drawable/btn_round"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        android:contentDescription="@string/t" />
 
     <Button
         android:id="@+id/btn_sign_up"
@@ -121,7 +125,6 @@
         android:layout_height="54dp"
         android:background="@drawable/round_btn"
         android:fontFamily="@font/font_sec"
-        android:onClick="registrationUser"
         android:text="@string/sign_up"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
@@ -138,7 +141,8 @@
         android:paddingEnd="20dp"
         android:src="@drawable/btn_round"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        android:contentDescription="@string/t" />
 
     <Button
         android:id="@+id/btn_sign_in"
@@ -161,9 +165,11 @@
         android:layout_height="68dp"
         android:layout_marginTop="15dp"
         android:src="@drawable/g_icon"
-        app:layout_constraintEnd_toEndOf="@+id/btnHaveAc"
-        app:layout_constraintStart_toStartOf="@+id/btnHaveAc"
-        app:layout_constraintTop_toBottomOf="@+id/btnHaveAc" />
+        app:layout_goneMarginTop="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="@+id/forgetPassword"
+        app:layout_constraintStart_toStartOf="@+id/forgetPassword"
+        app:layout_constraintTop_toBottomOf="@+id/forgetPassword"
+        android:contentDescription="@string/t" />
 
     <Button
         android:id="@+id/googleSignInButton"

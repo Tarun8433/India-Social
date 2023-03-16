@@ -67,6 +67,15 @@ public class Sign_in extends AppCompatActivity {
         // Hide the Action bar...
         Objects.requireNonNull(getSupportActionBar()).hide();
 
+        // Forget Password
+        binding.forgetPassword.setOnClickListener(v->{
+            Toast.makeText(Sign_in.this, "Reset Password", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(Sign_in.this,ForgetPassword.class));
+        });
+
+
+
+
         // sign in btn ...
         binding.btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -203,4 +212,6 @@ public class Sign_in extends AppCompatActivity {
         });
     }
 
+    public void registrationUser(View view) {
+    }
 }

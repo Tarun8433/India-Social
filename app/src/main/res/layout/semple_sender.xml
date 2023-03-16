@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginRight="@dimen/_7sdp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg_sender"
+        android:maxWidth="@dimen/_310sdp"
+        android:maxHeight="@dimen/_400sdp"
+        android:minHeight="@dimen/_30sdp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/senderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:inputType="textLongMessage|textMultiLine"
+            android:fontFamily="@font/font_sec"
+            android:maxWidth="@dimen/_270sdp"
+            android:minWidth="@dimen/_50sdp"
+            android:text="tarun"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/colorPrimaryVariant"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/senderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:text="12:02 pm"
+            android:fontFamily="@font/font_sec"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/colorPrimaryVariant"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/senderText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

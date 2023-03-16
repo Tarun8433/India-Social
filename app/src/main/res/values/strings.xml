@@ -11,7 +11,7 @@
     <string name="new_ac">Create a new account</string>
     <string name="sign_up">Sign Up</string>
     <string name="signUpWith">Sign Up with</string>
-    <string name="forgetPassword">Forget Password</string>
+    <string name="forgetPassword">Forget Password?</string>
     <string name="fullName">Full Name</string>
     <string name="email">Email Id</string>
     <string name="password">Password</string>
@@ -21,4 +21,8 @@
     <string name="con_password">Con-Password</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">TODO</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="email_Instruction">Please Enter the Email which was used \n to Registered with Us</string>
+    <string name="resat">RESAT</string>
 </resources>

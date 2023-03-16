@@ -2,31 +2,28 @@ package com.example.indiasocial.Moduls;
 
 public class Users {
 
-    String profilePic, userName, email, password, UserId, bio ;
+    String profilePic, userName, email, password, UserId, bio;
 
     public Users() {
 
     }
 
-    public Users(String profilePic, String userName, String email, String password, String userId) {
+    public Users(String profilePic, String userName, String email, String password, String userId, String bio) {
         this.profilePic = profilePic;
         this.userName = userName;
         this.email = email;
         this.password = password;
         UserId = userId;
+        this.bio = bio;
     }
 
-    public Users(String userName, String email, String profilePic) {
+    public Users(String userName, String email, String password) {
         this.userName = userName;
         this.email = email;
-        this.profilePic = profilePic;
+        this.password = password;
     }
 
-    public Users(String userName, String profilePic, String bio, String email) {
-        this.userName = userName;
-        this.bio = bio;
-        this.profilePic = profilePic;
-    }
+
 
 
     public String getProfilePic() {
