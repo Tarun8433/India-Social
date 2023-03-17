@@ -7,7 +7,6 @@
     tools:context=".Home"
     android:background="@color/colorPrimaryVariant">
 
-
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView2"
             android:layout_width="match_parent"
@@ -23,39 +22,29 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card"
-        android:layout_width="@dimen/_80sdp"
-        android:layout_height="@dimen/_40sdp"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        app:cardBackgroundColor="#7FF9F6"
-        android:layout_gravity="center"
-        app:cardCornerRadius="@dimen/_50sdp"
-        app:cardElevation="30sp"
-        >
-
-        <ImageView
-            android:layout_width="@dimen/_40sdp"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:padding="@dimen/_3sdp"
-            android:src="@drawable/home_ic" />
-
-    </androidx.cardview.widget.CardView>
-
-
-            <ImageView
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_gravity="start"
-                android:layout_marginStart="@dimen/_20sdp"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="52dp"
+                android:layout_gravity="left"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
-                android:padding="@dimen/_5sdp"
-                android:src="@drawable/story_ic" />
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                app:cardBackgroundColor="#7FF9F6"
+                app:cardCornerRadius="@dimen/_50sdp"
+                app:cardElevation="5sp">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/home_ic" />
+
+            </androidx.cardview.widget.CardView>
+
 
             <ImageView
                 android:layout_width="@dimen/_40sdp"

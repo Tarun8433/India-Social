@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.indiasocial.Fragments.ChatsFragment;
-import com.example.indiasocial.Fragments.GalleryFragment;
+import com.example.indiasocial.Fragments.StoryFragment;
 
 public class FragmentAdapter extends FragmentPagerAdapter {
     public FragmentAdapter(@NonNull FragmentManager fm) {
@@ -20,7 +20,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
         switch (position)
         {
             case 0: return new ChatsFragment();
-            case 1: return new GalleryFragment();
+            case 1: return new StoryFragment();
             default: return new ChatsFragment();
         }
     }
@@ -41,7 +41,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
         }
         if(position == 1)
         {
-            title = "Gallery";
+            title = "Story";
         }
         return title;
     }

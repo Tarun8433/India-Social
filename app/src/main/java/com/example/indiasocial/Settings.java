@@ -26,10 +26,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class Settings extends AppCompatActivity {
 
     ActivitySettingsBinding binding;
-    FirebaseUser firebaseUser;
     FirebaseAuth auth;
 
-    private String  Name, Bio, profilePic;
+    private String  Name, Bio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
