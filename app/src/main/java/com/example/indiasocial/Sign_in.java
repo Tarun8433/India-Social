@@ -69,7 +69,7 @@ public class Sign_in extends AppCompatActivity {
 
         // Forget Password
         binding.forgetPassword.setOnClickListener(v->{
-            Toast.makeText(Sign_in.this, "Reset Password", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Sign_in.this, "Please Enter Email and Resat Password", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(Sign_in.this,ForgetPassword.class));
         });
 

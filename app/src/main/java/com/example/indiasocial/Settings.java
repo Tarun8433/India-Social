@@ -41,7 +41,6 @@ public class Settings extends AppCompatActivity {
             Intent intent = new Intent(Settings.this, SettingsEdit.class);
             startActivity(intent);
             finish();
-
         });
 
         auth = FirebaseAuth.getInstance();

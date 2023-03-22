@@ -1,18 +1,26 @@
 package com.example.indiasocial;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.indiasocial.Adapter.FragmentAdapter;
 import com.example.indiasocial.Moduls.Users;
 import com.example.indiasocial.databinding.ActivityHomeBinding;
+import com.google.android.gms.tasks.OnCanceledListener;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -20,8 +28,12 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -42,11 +54,11 @@ public class Home extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         auth = FirebaseAuth.getInstance();
-
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-        DatabaseReference myRef = database.getReference().child("Register Users").child(Objects.requireNonNull(auth.getCurrentUser()).getUid()).child("profilePic");
+        DatabaseReference myRef = database.getReference().child("Register Users")
+                .child(Objects.requireNonNull(auth.getCurrentUser()).getUid()).child("profilePic");
 
         // Read from the database
         myRef.addValueEventListener(new ValueEventListener() {
@@ -78,7 +90,7 @@ public class Home extends AppCompatActivity {
         binding.tabLayout.setupWithViewPager(binding.viewPager);
 
     }
-     // Method to show the User profile in the home section
+    // Method to show the User profile in the home section
     private void showUserProfile(FirebaseUser firebaseUser) {
 
         String userId = auth.getUid();
@@ -133,6 +145,7 @@ public class Home extends AppCompatActivity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK
                         | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+                finish();
                  break;
         }
 

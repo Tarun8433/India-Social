@@ -66,4 +66,13 @@ dependencies {
     // image piker
     implementation 'com.github.dhaval2404:imagepicker:2.1'
 
+    // circular story
+    implementation 'com.github.3llomi:CircularStatusView:V1.0.3'
+
+    // Rounded Image View
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    // Story View
+    implementation 'com.github.OMARIHAMZA:StoryView:1.0.2-alpha'
+
 }

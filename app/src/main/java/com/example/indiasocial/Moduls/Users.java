@@ -23,9 +23,6 @@ public class Users {
         this.password = password;
     }
 
-
-
-
     public String getProfilePic() {
         return profilePic;
     }

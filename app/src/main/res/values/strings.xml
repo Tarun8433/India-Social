@@ -25,4 +25,8 @@
     <string name="profile_picture">Profile Picture</string>
     <string name="email_Instruction">Please Enter the Email which was used \n to Registered with Us</string>
     <string name="resat">RESAT</string>
+    <string name="last_message">Last Message</string>
+    <string name="tarun_sahani">Tarun Sahani</string>
+    <string name="loading">Loading...</string>
+    <string name="story_type">story type</string>
 </resources>

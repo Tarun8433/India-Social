@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_marginStart="@dimen/_5sdp"
     android:layout_marginEnd="@dimen/_5sdp"
-    android:background="@color/colorPrimaryVariant">
+    >
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
@@ -15,28 +16,25 @@
         android:layout_margin="@dimen/_5sdp"
         app:cardBackgroundColor="#7FF9F6"
         app:cardCornerRadius="@dimen/_50sdp"
-        app:cardElevation="12dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:orientation="vertical">
-
 
             <TextView
                 android:id="@+id/userName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginStart="@dimen/_60sdp"
-                android:text="Tarun Sahani"
+                android:text="@string/tarun_sahani"
                 android:fontFamily="@font/font_sec"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/_10ssp"
@@ -52,7 +50,8 @@
                 android:layout_marginStart="@dimen/_60sdp"
                 android:paddingTop="@dimen/_2sdp"
                 android:paddingBottom="@dimen/_2sdp"
-                android:text="Last Message"
+                android:text="@string/last_message"
+                android:maxHeight="@dimen/_15sdp"
                 android:fontFamily="@font/font_sec"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/_8ssp"
@@ -63,18 +62,16 @@
                 android:id="@+id/profilePic"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_50sdp"
-                android:layout_margin="@dimen/_2sdp"
+                android:layout_margin="@dimen/_5sdp"
                 android:src="@drawable/test_image"
                 app:civ_border_color="@color/colorPrimary"
-                app:civ_border_width="@dimen/_1sdp"
+                app:civ_border_width="@dimen/_2sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
-    
 </androidx.constraintlayout.widget.ConstraintLayout>
